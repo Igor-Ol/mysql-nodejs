@@ -10,6 +10,7 @@
             <th>Código</th>
             <th>Nome</th>
             <th>E-mail</th>
+            <th>Ação</th>
         </tr>
 
         <% if (estudantes.length > 0) { %>
@@ -18,6 +19,8 @@
                 <td><%-estudantes[i].id %></td>
                 <td><%-estudantes[i].nomecompleto %></td>
                 <td><%-estudantes[i].email %></td>
+                <td><a href="/delete-estudantes?id= <%- estudantes[i].id %>">Excluir</a></td>
+                <td><a href="/update-estudantes?id= <%- estudantes[i].id %>">Excluir</a></td>
             </tr>
         <% }  %> 
 
