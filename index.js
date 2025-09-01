@@ -95,7 +95,7 @@ app.post('update-estudante',function (req, res){
 
     var id = req.query.id;
 
-    conexao.query(sql, [nomecompleto, email, senha, id ] function(error, result){
+    conexao.query(sql, [nomecompleto, email, senha, id ], function (error, result){
         if(error) console.log(error);
         res.render(__dirname+'/alterarestudantes', {estudante:result});
         res.redirect('/estudantes');
